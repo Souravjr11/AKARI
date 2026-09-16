@@ -1989,61 +1989,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initKeyboardShortcuts();
   initSpecialDishesCarousel();
 
-  // Search input with instant clear button & popular chips
-  const searchInput = document.getElementById('menu-search-input');
-  const searchClearBtn = document.getElementById('menu-search-clear');
-  const searchTagChips = document.querySelectorAll('.search-tag-chip');
-
-  if (searchInput) {
-    let timeout = null;
-    searchInput.addEventListener('input', (e) => {
-      const val = e.target.value;
-      if (searchClearBtn) {
-        searchClearBtn.classList.toggle('visible', val.trim().length > 0);
-      }
-      clearTimeout(timeout);
-      timeout = setTimeout(() => {
-        handleSearch(val);
-      }, 200);
-    });
-
-    if (searchClearBtn) {
-      searchClearBtn.addEventListener('click', () => {
-        searchInput.value = '';
-        searchClearBtn.classList.remove('visible');
-        searchInput.focus();
-        handleSearch('');
-      });
-    }
-
-    searchInput.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        searchInput.value = '';
-        if (searchClearBtn) searchClearBtn.classList.remove('visible');
-        handleSearch('');
-      }
-    });
-  }
-
-  // Quick popular search suggestion chips
-  searchTagChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      const term = chip.dataset.search || chip.textContent.replace(/[^\w\s]/gi, '').trim();
-      if (searchInput) {
-        searchInput.value = term;
-        if (searchClearBtn) searchClearBtn.classList.add('visible');
-        handleSearch(term);
-        searchInput.focus();
-        
-        // Ensure "All Dishes" or appropriate category is highlighted
-        document.querySelectorAll('.cat-btn').forEach(btn => {
-          btn.classList.toggle('active', btn.dataset.category === 'all');
-        });
-        AppState.activeCategory = 'all';
-      }
-    });
-  });
-
   // Category buttons
   const catButtons = document.querySelectorAll('.cat-btn');
   catButtons.forEach(btn => {
