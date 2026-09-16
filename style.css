@@ -1422,6 +1422,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.25rem;
   display: -webkit-box;
   -webkit-line-clamp: 1;
+  line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1444,6 +1445,7 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(255, 255, 255, 0.68);
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   height: 2.4em;
@@ -1735,6 +1737,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.75rem;
     height: 2.2em;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
   }
   .food-card-3d .price-current {
     font-size: 1.18rem;
@@ -2281,6 +2284,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   transition: color 0.3s ease;
