@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AKARI (あかり) | Authentic Japanese Restaurant • Thakurpukur, Kolkata</title>
+  <meta name="description" content="AKARI — Authentic Japanese Taste, Made for Everyone. Handcrafted sushi, 18-hour tonkotsu ramen, donburi, crispy tempura and artisanal Japanese dining in Thakurpukur, Kolkata. WhatsApp Orders: +91 84206 05823.">
+  <meta name="theme-color" content="#FAF7F2">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="AKARI (あかり) | Authentic Japanese Restaurant • Thakurpukur, Kolkata">
+  <meta property="og:description" content="Authentic Japanese dishes in Thakurpukur, Kolkata. Handcrafted sushi, ramen, donburi and bento. Order on WhatsApp: +91 84206 05823.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Editorial Serif + Japanese Font + Modern Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Shippori+Mincho:wght@600;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Sakura Petals Canvas Animation -->
+  <canvas id="sakura-canvas" aria-hidden="true"></canvas>
+
+  <!-- Announcement Bar (Smooth Infinite Japanese Ticker) -->
+  <aside class="announcement-bar" aria-label="Restaurant Announcement">
+    <div class="announcement-track">
+      <div class="announcement-group">
+        <span class="announcement-item"><span class="announcement-badge">日本の伝統</span> Authentic Japanese Taste</span>
+        <span class="announcement-sep">✦</span>
+        <span class="announcement-item">🍣 Handcrafted Sushi, 18-Hr Tonkotsu Ramen & Bento</span>
+        <span class="announcement-sep">✦</span>
+        <span class="announcement-item">📍 Dine-In & Takeaway Open Daily in Thakurpukur, Kolkata</span>
+        <span class="announcement-sep">✦</span>
+        <a href="https://wa.me/918420605823?text=Hello%20TABERU%20Kolkata!%20I%20would%20like%20to%20place%20an%20order." class="announcement-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="#25D366"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"></path></svg>
+          <span>WhatsApp Orders: +91 84206 05823</span>
+        </a>
+        <span class="announcement-sep">✦</span>
+        <span class="announcement-item">⭐ 4.9/5 Rating (1,200+ Reviews)</span>
+        <span class="announcement-sep">✦</span>
+      </div>
+      <!-- Cloned Group for Seamless Infinite Loop -->
+      <div class="announcement-group" aria-hidden="true">
+        <span class="announcement-item"><span class="announcement-badge">日本の伝統</span> Authentic Japanese Taste</span>
+        <span class="announcement-sep">✦</span>
+        <span class="announcement-item">🍣 Handcrafted Sushi, 18-Hr Tonkotsu Ramen & Bento</span>
+        <span class="announcement-sep">✦</span>
+        <span class="announcement-item">📍 Dine-In & Takeaway Open Daily in Thakurpukur, Kolkata</span>
+        <span class="announcement-sep">✦</span>
+        <a href="https://wa.me/918420605823?text=Hello%20TABERU%20Kolkata!%20I%20would%20like%20to%20place%20an%20order." class="announcement-whatsapp-btn" tabindex="-1">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="#25D366"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"></path></svg>
+          <span>WhatsApp Orders: +91 84206 05823</span>
+        </a>
+        <span class="announcement-sep">✦</span>
+        <span class="announcement-item">⭐ 4.9/5 Rating (1,200+ Reviews)</span>
+        <span class="announcement-sep">✦</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       HEADER / NAVIGATION
+       ========================================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" aria-label="AKARI Japanese Restaurant Home">
+        <div class="hanko-stamp logo-stamp" title="あかり">あ</div>
+        <span class="logo-text">AKARI</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#menu" class="nav-link" onclick="scrollToSection('menu'); return false;">Menu</a>
+        <a href="#special-dish" class="nav-link" onclick="scrollToSection('special-dish'); return false;">Foods</a>
+        <a href="#services" class="nav-link" onclick="scrollToSection('services'); return false;">Services</a>
+        <a href="#about" class="nav-link" onclick="scrollToSection('about'); return false;">About Us</a>
+        <a href="#contact" class="nav-link" onclick="scrollToSection('contact'); return false;">Contact Us</a>
+      </nav>
+
+      <!-- Action Buttons & Controls -->
+      <div class="header-actions">
+        <!-- Favorites Counter -->
+        <button class="icon-action-btn" onclick="openFavoritesModal()" aria-label="View Favorite Dishes" title="Saved Favorites">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="badge-count favorites-count-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Shopping Cart Drawer Trigger -->
+        <button class="icon-action-btn" onclick="openCartDrawer()" aria-label="Open Shopping Cart Drawer" title="Shopping Cart">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="badge-count cart-count-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Order Now Button -->
+        <button class="btn btn-primary btn-sm" onclick="scrollToSection('menu')">
+          Order Now
+        </button>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="hamburger-btn" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="drawer-backdrop" id="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <div class="hanko-stamp logo-stamp">あ</div>
+        <span class="logo-text">AKARI</span>
+      </div>
+      <button class="modal-close-btn" onclick="document.getElementById('hamburger-toggle').click()" aria-label="Close navigation">×</button>
+    </div>
+
+    <nav class="mobile-nav-links">
+      <a href="#menu" class="mobile-nav-link" onclick="scrollToSection('menu')">
+        <span>Menu</span>
+        <span style="font-size: 1rem; color: var(--red-vermilion);">メニュー</span>
+      </a>
+      <a href="#special-dish" class="mobile-nav-link" onclick="scrollToSection('special-dish')">
+        <span>Foods & Specials</span>
+        <span style="font-size: 1rem; color: var(--red-vermilion);">料理</span>
+      </a>
+      <a href="#services" class="mobile-nav-link" onclick="scrollToSection('services')">
+        <span>Services</span>
+        <span style="font-size: 1rem; color: var(--red-vermilion);">サービス</span>
+      </a>
+      <a href="#about" class="mobile-nav-link" onclick="scrollToSection('about')">
+        <span>About Us</span>
+        <span style="font-size: 1rem; color: var(--red-vermilion);">私たち</span>
+      </a>
+      <a href="#location" class="mobile-nav-link" onclick="scrollToSection('location')">
+        <span>Location</span>
+        <span style="font-size: 1rem; color: var(--red-vermilion);">場所</span>
+      </a>
+      <a href="#contact" class="mobile-nav-link" onclick="scrollToSection('contact')">
+        <span>Contact</span>
+        <span style="font-size: 1rem; color: var(--red-vermilion);">連絡先</span>
+      </a>
+    </nav>
+
+    <div class="mobile-drawer-footer">
+      <button class="btn btn-primary" style="width: 100%;" onclick="openCartDrawer()">
+        View Cart (<span class="cart-count-badge">0</span>)
+      </button>
+    </div>
+  </aside>
+
+  <main>
+    <!-- =========================================================================
+         HERO SECTION
+         ========================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="section-kanji-bg kanji-cream-bg kanji-hero" aria-hidden="true">
+        <span>美</span>
+        <span>味</span>
+      </div>
+      <div class="container hero-grid">
+        
+        <!-- Left Side: Editorial Typography & CTAs -->
+        <div class="hero-left">
+          <div class="hero-eyebrow">
+            <span>日本の味</span>
+            <span>/</span>
+            <span>Authentic Japanese Taste</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Enjoy Delicious<br>
+            The <span class="text-accent">Japanese Foods</span>
+          </h1>
+
+          <p class="hero-desc">
+            We serve authentic Japanese dishes prepared with carefully selected ingredients, traditional flavors, and a modern touch. Every meal is crafted to bring authentic Japanese dining right to Thakurpukur, Kolkata.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn btn-primary btn-lg" onclick="scrollToSection('menu')">
+              Order Now
+            </button>
+            <button class="play-circle-btn" onclick="openPrepareModal()" aria-label="Watch how to order">
+              <span class="play-icon-box">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </span>
+              <span>How to Order</span>
+            </button>
+          </div>
+
+          <!-- Trust Badges Bar -->
+          <div class="hero-trust-bar">
+            <div class="trust-item">
+              <span class="trust-icon">★</span>
+              <span>4.9 / 5 (1,200+ Reviews)</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon">🐟</span>
+              <span>100% Fresh Daily Seafood</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon">📍</span>
+              <span>Thakurpukur, Kolkata</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Layered Floating Japanese Food Art Composition -->
+        <div class="hero-right">
+          <div class="hero-art-container">
+            <!-- Large Muted Red Circular Japanese Sun / Ensō Shape -->
+            <div class="hero-sun-circle" aria-hidden="true">
+              <div class="hero-sun-pattern"></div>
+            </div>
+
+            <!-- Main Floating Japanese Food Composition (2D Cartoon Sushi Feast) -->
+            <img 
+              src="assets/images/hero-sushi.jpg" 
+              alt="Premium Japanese Sushi Platter" 
+              class="hero-food-main"
+              width="500" 
+              height="500"
+            >
+
+            <!-- Floating Satellite Badges (Nigiri & Ramen) -->
+            <div class="floating-garnish garnish-1" onclick="openFoodModal('sushi-1')">
+              <img src="assets/images/menu-nigiri.jpg" alt="Fresh Salmon Nigiri" class="garnish-img">
+              <div class="garnish-info">
+                <h5>Salmon Nigiri</h5>
+                <span>$12.00 • 鮭握り</span>
+              </div>
+            </div>
+
+            <div class="floating-garnish garnish-2" onclick="openFoodModal('ramen-1')">
+              <img src="assets/images/menu-ramen.jpg" alt="Artisanal Tonkotsu Ramen" class="garnish-img">
+              <div class="garnish-info">
+                <h5>Tonkotsu Ramen</h5>
+                <span>$16.50 • 豚骨ラーメン</span>
+              </div>
+            </div>
+
+            <!-- Subtle Decorative Sakura & Leaf Motifs -->
+            <svg class="hero-deco-sakura sakura-pos-1" viewBox="0 0 50 50" fill="#F3CCD3">
+              <path d="M25 0 C30 15 45 20 50 25 C35 30 30 45 25 50 C20 35 5 30 0 25 C15 20 20 5 25 0 Z"></path>
+            </svg>
+            <svg class="hero-deco-sakura sakura-pos-2" viewBox="0 0 50 50" fill="#F9E0E5">
+              <path d="M25 0 C30 15 45 20 50 25 C35 30 30 45 25 50 C20 35 5 30 0 25 C15 20 20 5 25 0 Z"></path>
+            </svg>
+            <svg class="hero-deco-sakura leaf-pos-1" viewBox="0 0 50 50" fill="#4D6E48" opacity="0.7">
+              <path d="M10 40 Q25 10 45 5 Q35 25 10 40 Z"></path>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         ABOUT US SECTION
+         ========================================================================= -->
+    <section class="section-padding about-section" id="about">
+      <div class="section-kanji-bg kanji-cream-bg kanji-about" aria-hidden="true">
+        <span>日</span>
+        <span>本</span>
+      </div>
+      <div class="container about-grid">
+        
+        <!-- Left: Deep Red Rounded Card with Overlapping Circular Ramen Bowl -->
+        <div class="about-visual-box">
+          <div class="about-red-card"></div>
+          <img 
+            src="assets/images/about-ramen.jpg" 
+            alt="Artisanal Tonkotsu Ramen" 
+            class="about-ramen-circle"
+            width="360"
+            height="360"
+          >
+          <!-- Floating Sakura and Leaf Motifs -->
+          <svg class="hero-deco-sakura sakura-pos-1" style="top: 2%; right: 5%;" viewBox="0 0 50 50" fill="#F3CCD3">
+            <path d="M25 0 C30 15 45 20 50 25 C35 30 30 45 25 50 C20 35 5 30 0 25 C15 20 20 5 25 0 Z"></path>
+          </svg>
+          <svg class="hero-deco-sakura leaf-pos-1" style="bottom: 8%; left: 0%;" viewBox="0 0 50 50" fill="#4D6E48" opacity="0.7">
+            <path d="M10 40 Q25 10 45 5 Q35 25 10 40 Z"></path>
+          </svg>
+        </div>
+
+        <!-- Right: Editorial Story & Tradition -->
+        <div class="about-right">
+          <div class="section-eyebrow">
+            <span>About Us</span>
+            <span>/</span>
+            <span>私たちに関しては</span>
+          </div>
+
+          <h2 class="section-title">
+            We Serve Authentic<br>Japanese Food
+          </h2>
+
+          <p class="about-narrative">
+            At AKARI, we bring the heart of Japanese cuisine to every plate. From handcrafted sushi and rich ramen to comforting donburi and crispy tempura, our menu celebrates the flavors people love across Japan and around the world.
+          </p>
+
+          <div class="about-stats-grid">
+            <div class="stat-box">
+              <h4>25+</h4>
+              <p>Years of Culinary Heritage</p>
+            </div>
+            <div class="stat-box">
+              <h4>100%</h4>
+              <p>Daily Fresh Seafood</p>
+            </div>
+            <div class="stat-box">
+              <h4>60</h4>
+              <p>Authentic Recipes</p>
+            </div>
+          </div>
+
+          <button class="btn btn-outline" onclick="openStoryModal()">
+            Explore Story
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SPECIAL DISH SECTION ("Our Special Dishes" - 3D Showcase Carousel)
+         ========================================================================= -->
+    <section class="section-padding special-dish-section" id="special-dish">
+      <div class="section-kanji-bg kanji-cream-bg kanji-special-left" aria-hidden="true">
+        <span>美</span>
+        <span>味</span>
+      </div>
+      <div class="section-kanji-bg kanji-cream-bg kanji-special-right" aria-hidden="true">
+        <span>日</span>
+        <span>本</span>
+      </div>
+      <div class="container">
+        
+        <!-- Header Content -->
+        <div class="special-dish-header text-center">
+          <div class="special-tag">
+            <span>職人の傑作</span>
+            <span>•</span>
+            <span>Chef's Special Selection</span>
+          </div>
+          <h2 class="special-title">Our Special Dishes</h2>
+          <p class="special-subtitle">
+            Experience our master chef's handcrafted delicacies in interactive 3D perspective — from ultra-fresh bluefin sashimi to 18-hour slow-simmered tonkotsu ramen.
+          </p>
+        </div>
+
+        <!-- 3D CAROUSEL STAGE -->
+        <div class="carousel-stage-container">
+          
+          <!-- Interactive 3D Stage -->
+          <div class="carousel-stage" id="special-carousel-stage">
+            <div class="carousel-track" id="special-carousel-track">
+              <!-- Cards rendered dynamically by script.js -->
+            </div>
+
+            <!-- Glass Navigation Controls -->
+            <button class="nav-arrow prev-arrow" id="special-btn-prev" aria-label="Previous Special Dish">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="nav-arrow next-arrow" id="special-btn-next" aria-label="Next Special Dish">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+
+          <!-- Dynamic Pagination Indicators -->
+          <div class="pagination-bar" id="special-carousel-pagination"></div>
+
+          <!-- Quick Interaction Hint -->
+          <div class="interaction-hints">
+            <span class="hint-item">🖱️ Move mouse over active card to tilt</span>
+            <span class="hint-divider">•</span>
+            <span class="hint-item">👆 Swipe left/right on touch</span>
+            <span class="hint-divider">•</span>
+            <span class="hint-item">⏱️ Auto-rotates smoothly</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         MENU SECTION (THE CORE SHOWCASE - 60 ITEMS, 12 CATEGORIES)
+         ========================================================================= -->
+    <section class="menu-section" id="menu">
+      <div class="section-kanji-bg kanji-red-bg kanji-menu-left" aria-hidden="true">
+        <span>東</span>
+        <span>京</span>
+      </div>
+      <div class="section-kanji-bg kanji-red-bg kanji-menu-right" aria-hidden="true">
+        <span>食</span>
+        <span>物</span>
+      </div>
+      <div class="container">
+        
+        <!-- Menu Section Header (Full-Width Red Style matching Reference) -->
+        <div class="text-center" style="margin-bottom: 36px; position: relative; z-index: 2;">
+          <div class="section-eyebrow" style="color: #FFE6E6; justify-content: center;">日本の献立 • Traditional Menu</div>
+          <h2 class="section-title" style="color: #FFFFFF; margin-bottom: 12px;">Our Menu</h2>
+          <p style="color: rgba(255, 255, 255, 0.9); max-width: 620px; margin: 0 auto; line-height: 1.65; font-size: 1.05rem;">
+            Explore the authentic flavors of Japan — from hand-pressed nigiri and savory ramen to crispy tempura and artisanal matcha.
+          </p>
+        </div>
+
+        <!-- Menu Search & Category Controls -->
+        <div class="menu-controls">
+          
+          <!-- Instant Search Bar -->
+          <div class="menu-search-container">
+            <div class="menu-search-wrapper">
+              <span class="menu-search-icon-wrap" aria-hidden="true">
+                <svg class="menu-search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </span>
+              <input 
+                type="text" 
+                id="menu-search-input" 
+                class="menu-search-input" 
+                placeholder="Search dishes, ingredients (e.g., ramen, salmon, tempura)..."
+                aria-label="Search menu dishes"
+                autocomplete="off"
+                spellcheck="false"
+              >
+              <button type="button" id="menu-search-clear" class="menu-search-clear" aria-label="Clear search query" title="Clear search">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Quick Popular Search Suggestions -->
+            <div class="menu-search-suggestions">
+              <span class="suggestions-label">Popular:</span>
+              <button type="button" class="search-tag-chip" data-search="Ramen">🍜 Ramen</button>
+              <button type="button" class="search-tag-chip" data-search="Salmon">🍣 Salmon</button>
+              <button type="button" class="search-tag-chip" data-search="Wagyu">🥩 Wagyu</button>
+              <button type="button" class="search-tag-chip" data-search="Tempura">🍤 Tempura</button>
+              <button type="button" class="search-tag-chip" data-search="Matcha">🍵 Matcha</button>
+            </div>
+          </div>
+
+          <!-- Horizontally Scrollable Category Filter Buttons -->
+          <nav class="category-filter-bar" aria-label="Menu Category Filter">
+            <button class="cat-btn active" data-category="all">✨ All Dishes</button>
+            <button class="cat-btn" data-category="sushi-sashimi">🍣 Sushi & Sashimi</button>
+            <button class="cat-btn" data-category="ramen">🍜 Ramen</button>
+            <button class="cat-btn" data-category="rice-donburi">🍚 Rice & Donburi</button>
+            <button class="cat-btn" data-category="bento">🍱 Bento & Sets</button>
+            <button class="cat-btn" data-category="tempura">🍤 Tempura</button>
+            <button class="cat-btn" data-category="starters">🥟 Starters & Snacks</button>
+            <button class="cat-btn" data-category="grill">🍢 Japanese Grill</button>
+            <button class="cat-btn" data-category="desserts">🍡 Desserts</button>
+            <button class="cat-btn" data-category="drinks">🍵 Drinks</button>
+            <button class="cat-btn" data-category="combos">🍱 Signature Combos</button>
+          </nav>
+
+        </div>
+
+        <!-- Meta Results Bar -->
+        <div class="menu-meta-bar">
+          <span id="menu-results-count">Showing 13 signature dishes</span>
+          <span class="dietary-hint">💡 Tap any dish card to view full ingredients and nutritional profile</span>
+        </div>
+
+        <!-- Dynamic Menu Grid (Populated via script.js with signature dishes) -->
+        <div class="menu-grid" id="menu-grid">
+          <!-- Dynamically Rendered -->
+        </div>
+
+        <!-- View All / Pagination Button -->
+        <div class="text-center" style="margin-top: 20px;">
+          <button class="btn btn-outline btn-lg" id="load-more-btn" onclick="toggleShowAllItems()" style="display: none;">
+            View All Dishes
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SERVICES SECTION
+         ========================================================================= -->
+    <section class="section-padding services-section" id="services">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-eyebrow">おもてなし • Japanese Hospitality</div>
+          <h2 class="section-title">Our Services</h2>
+          <p class="section-subtitle">Whether joining us in our serene dining room or enjoying fresh dishes in the comfort of your home, we deliver excellence.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- 1. Dine-In -->
+          <article class="service-card">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+                <path d="M7 2v20"></path>
+                <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
+              </svg>
+            </div>
+            <h3>1. Dine-In</h3>
+            <p>Enjoy authentic Japanese cuisine in a warm and relaxing atmosphere crafted with natural hinoki wood and soft ambient lighting.</p>
+          </article>
+
+          <!-- 2. Takeaway -->
+          <article class="service-card">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v1"></path>
+                <path d="M18 8h4a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-4"></path>
+                <circle cx="8" cy="12" r="2"></circle>
+              </svg>
+            </div>
+            <h3>2. Takeaway</h3>
+            <p>Freshly prepared Japanese food packed carefully for takeaway with eco-friendly thermal preservation packaging.</p>
+          </article>
+
+          <!-- 3. Online Ordering -->
+          <article class="service-card">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+            </div>
+            <h3>3. Online Ordering</h3>
+            <p>Order your favorite Japanese dishes online quickly and easily with live order updates and doorstep express courier.</p>
+          </article>
+
+          <!-- 4. Catering -->
+          <article class="service-card">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+            </div>
+            <h3>4. Catering</h3>
+            <p>Japanese food packages for parties, corporate events and special celebrations with on-site sushi chef options available.</p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         WHY CHOOSE US SECTION
+         ========================================================================= -->
+    <section class="section-padding why-section" id="why-us">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-eyebrow">こだわり • Our Philosophy</div>
+          <h2 class="section-title">Why Choose AKARI?</h2>
+          <p class="section-subtitle">Every technique, seasoning, and cut reflects our deep commitment to the time-honored principles of Japanese washoku.</p>
+        </div>
+
+        <div class="why-grid">
+          <!-- Pillar 1 -->
+          <div class="why-item">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3>Authentic Japanese Flavors</h3>
+            <p>House-brewed dashi, aged artisanal shoyu, and genuine mirin crafted following traditional Tokyo recipes.</p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="why-item">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m4.93 4.93 4.24 4.24"></path>
+                <path d="m14.83 9.17 4.24-4.24"></path>
+                <path d="m14.83 14.83 4.24 4.24"></path>
+                <path d="m9.17 14.83-4.24 4.24"></path>
+              </svg>
+            </div>
+            <h3>Fresh Ingredients</h3>
+            <p>Sashimi-grade bluefin tuna, Scottish salmon, and seasonal produce sourced and inspected every morning.</p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="why-item">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+              </svg>
+            </div>
+            <h3>Handcrafted Dishes</h3>
+            <p>Every roll, nigiri, and noodle bowl is handmade to order by itamae chefs with decades of mastery.</p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="why-item">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3>Fast & Fresh Service</h3>
+            <p>Quick preparation without ever sacrificing quality, maintaining ideal dish temperature and texture.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         TESTIMONIALS SECTION
+         ========================================================================= -->
+    <section class="section-padding testimonials-section" id="testimonials">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-eyebrow">お客様の声 • Reviews</div>
+          <h2 class="section-title">What Our Customers Say</h2>
+          <p class="section-subtitle">Discover how food lovers describe their culinary journey with AKARI in Kolkata and beyond.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <article class="testimonial-card">
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-quote">
+              “Every dish tasted incredibly fresh. The sushi was beautifully prepared and the ramen was amazing. The broth has a depth you only find in authentic Japanese kitchens.”
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Emi Tanaka" class="testimonial-avatar">
+              <div class="author-info">
+                <h4>Emi Tanaka</h4>
+                <span>Kolkata, West Bengal</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 2 -->
+          <article class="testimonial-card">
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-quote">
+              “The Tonkotsu Ramen is hands down the best in Kolkata. Rich, silky broth, melt-in-the-mouth chashu, and perfectly cooked noodles every time.”
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Marcus Chen" class="testimonial-avatar">
+              <div class="author-info">
+                <h4>Marcus Chen</h4>
+                <span>Culinary Journalist</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 3 -->
+          <article class="testimonial-card">
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-quote">
+              “The Salmon Nigiri and Rainbow Roll were masterclasses in sushi balance. The rice seasoning is warm and delicate, elevating the seafood.”
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Sophia Dubois" class="testimonial-avatar">
+              <div class="author-info">
+                <h4>Sophia Dubois</h4>
+                <span>Food Critic</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 4 -->
+          <article class="testimonial-card">
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-quote">
+              “Online takeaway arrived steaming hot and beautifully packed. Ordering through WhatsApp is super fast and convenient. Outstanding quality!”
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Kenji Takahashi" class="testimonial-avatar">
+              <div class="author-info">
+                <h4>Kenji Takahashi</h4>
+                <span>Thakurpukur Resident</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         MEMBERSHIP / NEWSLETTER SECTION
+         ========================================================================= -->
+    <section class="newsletter-section" id="newsletter">
+      <div class="section-kanji-bg kanji-red-bg kanji-news-left" aria-hidden="true">
+        <span>日</span>
+        <span>本</span>
+      </div>
+      <div class="section-kanji-bg kanji-red-bg kanji-news-right" aria-hidden="true">
+        <span>東</span>
+        <span>京</span>
+      </div>
+      <div class="newsletter-pattern"></div>
+      <div class="container">
+        
+        <div class="newsletter-content">
+          <div class="section-eyebrow" style="color: #FFE6E6; justify-content: center;">会員登録 • Member Exclusive</div>
+          <h2 class="newsletter-title">
+            Join Our Member And Get<br>Discount Up To 35%
+          </h2>
+          <p class="newsletter-desc">
+            Sign up for the AKARI newsletter and receive exclusive offers, new menu updates and special discounts straight to your inbox.
+          </p>
+
+          <form class="newsletter-form" id="newsletter-form" novalidate>
+            <input 
+              type="email" 
+              class="newsletter-input" 
+              placeholder="Enter your email address" 
+              required
+              aria-label="Email address for AKARI newsletter"
+            >
+            <button type="submit" class="btn btn-white">
+              Subscribe
+            </button>
+          </form>
+
+          <div id="newsletter-success" style="display: none;"></div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         LOCATION & HOURS SECTION ("Visit AKARI")
+         ========================================================================= -->
+    <section class="section-padding location-section" id="location">
+      <div class="container location-grid">
+        
+        <!-- Left: Address, Hours & Actions -->
+        <div class="location-info-col">
+          <div class="section-eyebrow">店舗案内 • Find Us</div>
+          <h2>Visit AKARI</h2>
+          <p class="location-lead">
+            Conveniently nestled in Thakurpukur, Kolkata on Diamond Harbour Road, near 3A Bus Stand and Joka Metro.
+          </p>
+
+          <div class="info-cards-stack">
+            <!-- Address Card -->
+            <div class="info-card">
+              <div class="info-card-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="info-card-text">
+                <h4>Thakurpukur, Kolkata</h4>
+                <p>Diamond Harbour Road, Near 3A Bus Stand, Thakurpukur, Kolkata, West Bengal 700063</p>
+              </div>
+            </div>
+
+            <!-- Hours Card -->
+            <div class="info-card">
+              <div class="info-card-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div class="info-card-text">
+                <h4>Opening Hours</h4>
+                <p>Monday – Friday: 11:00 AM – 10:30 PM<br>Saturday – Sunday: 11:00 AM – 11:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" onclick="openDirectionsModal()">
+            Get Directions
+          </button>
+        </div>
+
+        <!-- Right: Stylish Japanese Map Card Placeholder -->
+        <div class="map-placeholder-card">
+          <div class="map-visual-box">
+            <!-- Stylized Street Grid SVG -->
+            <svg class="map-streets-svg" viewBox="0 0 400 300" fill="none" stroke="currentColor">
+              <line x1="0" y1="80" x2="400" y2="80" stroke="#C83228" stroke-width="3"></line>
+              <line x1="0" y1="180" x2="400" y2="180" stroke="#2B2523" stroke-width="1.5"></line>
+              <line x1="120" y1="0" x2="120" y2="300" stroke="#2B2523" stroke-width="1.5"></line>
+              <line x1="280" y1="0" x2="280" y2="300" stroke="#C83228" stroke-width="2.5"></line>
+              <circle cx="280" cy="140" r="35" fill="rgba(184, 40, 30, 0.05)" stroke="#B8281E" stroke-dasharray="4 4"></circle>
+            </svg>
+
+            <!-- Map Location Pin -->
+            <div class="map-pin-pulse">
+              <div class="map-pin-badge">
+                <span>🍣 AKARI Thakurpukur, Kolkata</span>
+              </div>
+              <div class="map-pin-dot"></div>
+            </div>
+          </div>
+
+          <div class="map-footer-label">
+            <span class="map-station-badge">📍 Diamond Harbour Road (3A Bus Stand / Joka Metro)</span>
+            <span style="font-size: 0.85rem; color: var(--red-vermilion); font-weight: 600;">Open Daily</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         CONTACT & TABLE RESERVATION SECTION
+         ========================================================================= -->
+    <section class="section-padding contact-section" id="contact">
+      <div class="container contact-grid">
+        
+        <!-- Left: Direct Channels & Hotline -->
+        <div class="contact-info-col">
+          <div class="section-eyebrow">ご予約・お問い合わせ • Connect</div>
+          <h2>Get in Touch with Us</h2>
+          <p class="desc">
+            Reserve your table for an authentic omakase evening, inquire about private tatami dining rooms, or request custom event catering.
+          </p>
+
+          <div class="direct-channels">
+            <div class="channel-item">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="channel-meta">
+                <span>Direct Phone</span>
+                <strong>+91 84206 05823</strong>
+              </div>
+            </div>
+
+            <div class="channel-item">
+              <div class="channel-icon" style="background-color: #25D366; color: #FFFFFF;">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"></path>
+                </svg>
+              </div>
+              <div class="channel-meta">
+                <span>WhatsApp Order Line</span>
+                <strong><a href="https://wa.me/918420605823" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">+91 84206 05823</a></strong>
+              </div>
+            </div>
+
+            <div class="channel-item">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="channel-meta">
+                <span>Email Address</span>
+                <strong>hello@taberu.com</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Contact & Reservation Form -->
+        <div class="reservation-card-box">
+          <h3>Contact Us & Reservations</h3>
+          <p class="sub">Send us a message or request a table reservation in Thakurpukur, Kolkata.</p>
+
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Name *</label>
+                <input type="text" id="contact-name" placeholder="Rahul Mukherjee" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email *</label>
+                <input type="email" id="contact-email" placeholder="rahul@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-phone">Phone / WhatsApp *</label>
+                <input type="tel" id="contact-phone" placeholder="+91 84206 05823" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-subject">Inquiry Type</label>
+                <select id="contact-subject">
+                  <option value="reservation">Table Reservation</option>
+                  <option value="catering">Event / Catering</option>
+                  <option value="general" selected>General Question</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Message *</label>
+              <textarea id="contact-message" rows="3" placeholder="Write your message, feedback, or table reservation request here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="footer-kanji-bg" aria-hidden="true">伝統</div>
+    <div class="container">
+      
+      <div class="footer-top">
+        <!-- Left: Brand & Tagline -->
+        <div class="footer-brand">
+          <a href="#" class="brand-logo">
+            <div class="hanko-stamp logo-stamp" style="border-color: #FFF; color: #FFF;">あ</div>
+            <span class="logo-text">AKARI</span>
+          </a>
+          <p class="footer-tagline">
+            “Authentic Japanese taste, served with heart.” Prepared with passion in Thakurpukur, Kolkata.
+          </p>
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://wa.me/918420605823" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="WhatsApp" title="Chat on WhatsApp +91 84206 05823" style="color: #25D366;">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="#menu" onclick="scrollToSection('menu')">Menu</a>
+            <a href="#special-dish" onclick="scrollToSection('special-dish')">Foods</a>
+            <a href="#services" onclick="scrollToSection('services')">Services</a>
+            <a href="#about" onclick="scrollToSection('about')">About Us</a>
+            <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="#menu" onclick="scrollToSection('menu')">Order Now</a>
+            <a href="#contact" onclick="scrollToSection('contact')">Reservations</a>
+            <a href="https://wa.me/918420605823" target="_blank" rel="noopener noreferrer">Order via WhatsApp</a>
+            <a href="javascript:void(0)" onclick="showToast('AKARI values your privacy. No personal data is shared.', 'info')">Privacy Policy</a>
+          </div>
+        </div>
+
+        <!-- Hours & Address -->
+        <div class="footer-col">
+          <h4>Visit Us</h4>
+          <p style="font-size: 0.92rem; line-height: 1.7; margin-bottom: 12px;">
+            Diamond Harbour Road<br>Near 3A Bus Stand<br>Thakurpukur, Kolkata 700063<br>
+            <strong>WhatsApp: +91 84206 05823</strong>
+          </p>
+          <p style="font-size: 0.88rem; color: rgba(255,255,255,0.55);">
+            Mon–Fri: 11am – 10:30pm<br>Sat–Sun: 11am – 11pm
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div class="footer-bottom">
+        <div>© 2026 AKARI. All Rights Reserved.</div>
+        <div style="font-family: var(--font-japanese); font-size: 0.82rem; color: rgba(255,255,255,0.4);">
+          日本料理 • 心を込めて提供いたします
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- =========================================================================
+       FOOD DETAIL MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="food-modal" role="dialog" aria-modal="true" aria-labelledby="food-modal-title">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeFoodModal()" aria-label="Close food details">×</button>
+      <div id="food-modal-body">
+        <!-- Dynamically rendered by script.js -->
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       SHOPPING CART DRAWER
+       ========================================================================= -->
+  <div class="drawer-backdrop" id="cart-backdrop" onclick="closeCartDrawer()"></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping Cart">
+    
+    <!-- Drawer Header -->
+    <div class="cart-header">
+      <div class="cart-title-wrap">
+        <div class="hanko-stamp" style="width: 32px; height: 32px; font-size: 0.78rem;">注</div>
+        <h3>Your Order</h3>
+      </div>
+      <button class="modal-close-btn" onclick="closeCartDrawer()" aria-label="Close cart">×</button>
+    </div>
+
+    <!-- Free Delivery Indicator -->
+    <div class="cart-free-shipping-bar" id="cart-free-shipping-bar">
+      <!-- Dynamically filled -->
+    </div>
+
+    <!-- Items List -->
+    <div class="cart-items-list" id="cart-items-list">
+      <!-- Dynamically filled by script.js -->
+    </div>
+
+    <!-- Cart Footer & Checkout -->
+    <div class="cart-footer">
+      
+      <!-- Promo Code Input -->
+      <div class="promo-input-group">
+        <input type="text" id="promo-input" placeholder="Promo code (e.g. AKARI10)" aria-label="Promo code">
+        <button class="btn btn-outline-red btn-sm" onclick="applyPromoCode()">Apply</button>
+      </div>
+
+      <!-- Financial Totals -->
+      <div class="cart-totals-summary">
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <div class="summary-line" id="cart-discount-row" style="display: none; color: var(--red-vermilion);">
+          <span>Discount</span>
+          <span id="cart-discount">-$0.00</span>
+        </div>
+        <div class="summary-line">
+          <span>Delivery</span>
+          <span id="cart-delivery">$0.00</span>
+        </div>
+        <div class="summary-line">
+          <span>Estimated Tax (8%)</span>
+          <span id="cart-tax">$0.00</span>
+        </div>
+        <div class="summary-line total-line">
+          <span>Total</span>
+          <span id="cart-total">$0.00</span>
+        </div>
+      </div>
+
+      <!-- Proceed to Order CTA -->
+      <button class="btn btn-primary btn-lg cart-checkout-btn" id="cart-checkout-btn" onclick="openCheckoutModal()">
+        Proceed to Order
+      </button>
+
+    </div>
+  </aside>
+
+
+  <!-- =========================================================================
+       CHECKOUT MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="checkout-modal" role="dialog" aria-modal="true">
+    <div class="modal-box checkout-box">
+      <button class="modal-close-btn" onclick="closeCheckoutModal()" aria-label="Close checkout">×</button>
+      <h2>Complete Your Order</h2>
+      <p class="sub">Please enter your delivery destination in Thakurpukur, Kolkata. Your order details will be sent directly to WhatsApp (<strong>+91 84206 05823</strong>).</p>
+
+      <div class="checkout-summary-box" id="checkout-order-summary">
+        <!-- Filled by JS -->
+      </div>
+
+      <form id="checkout-form">
+        <div class="form-group">
+          <label for="checkout-name">Receiver Name *</label>
+          <input type="text" id="checkout-name" placeholder="Rahul Mukherjee" required>
+        </div>
+        <div class="form-group">
+          <label for="checkout-address">Delivery Address (Thakurpukur / Kolkata area) *</label>
+          <input type="text" id="checkout-address" placeholder="e.g. Diamond Harbour Road, Near 3A Bus Stand, Thakurpukur, Kolkata" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="checkout-phone">Phone / WhatsApp Number *</label>
+            <input type="tel" id="checkout-phone" placeholder="+91 84206 05823" required>
+          </div>
+          <div class="form-group">
+            <label for="checkout-payment">Payment Method</label>
+            <select id="checkout-payment">
+              <option value="Cash on Delivery">Cash on Delivery</option>
+              <option value="UPI / QR Pay (GPay / PhonePe / Paytm)">UPI / QR Pay (GPay / PhonePe / Paytm)</option>
+              <option value="Credit / Debit Card">Credit / Debit Card</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 10px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+          <span>Confirm & Send Order via WhatsApp</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"></path>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       ORDER SUCCESS RECEIPT MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="order-success-modal" role="dialog" aria-modal="true">
+    <div class="modal-box" style="max-width: 520px;">
+      <button class="modal-close-btn" onclick="closeOrderSuccessModal()" aria-label="Close confirmation">×</button>
+      <div id="order-success-details">
+        <!-- Rendered by JS -->
+      </div>
+      <div style="padding: 0 24px 24px; text-align: center;">
+        <button class="btn btn-primary" onclick="closeOrderSuccessModal()">Back to Menu</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       RESERVATION SUCCESS MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="reservation-success-modal" role="dialog" aria-modal="true">
+    <div class="modal-box" style="max-width: 520px;">
+      <button class="modal-close-btn" onclick="closeReservationModal()" aria-label="Close confirmation">×</button>
+      <div id="reservation-success-details" style="padding: 36px 24px; text-align: center;">
+        <!-- Rendered by JS -->
+      </div>
+      <div style="padding: 0 24px 24px; text-align: center;">
+        <button class="btn btn-primary" onclick="closeReservationModal()">Done</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       "DISCOVER OUR STORY" MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="story-modal" role="dialog" aria-modal="true">
+    <div class="modal-box" style="max-width: 680px; padding: 40px;">
+      <button class="modal-close-btn" onclick="closeStoryModal()" aria-label="Close story">×</button>
+      <div class="section-eyebrow">伝統の物語 • Heritage Story</div>
+      <h2 style="font-size: 2.2rem; margin-bottom: 16px;">The Story of AKARI (あかり)</h2>
+      <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">
+        Founded with a profound passion for authentic washoku — the traditional culinary philosophy recognized by UNESCO as intangible cultural heritage — AKARI brings true Japanese craftsmanship to Thakurpukur, Kolkata.
+      </p>
+      <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 24px;">
+        Our founder and executive chef trained for 15 years in historic Kyoto ryotei kitchens before bringing that uncompromising craftsmanship to Kolkata, where everyone can savor authentic Japanese culinary elegance.
+      </p>
+      <div style="background-color: var(--bg-cream); border-radius: var(--radius-sm); padding: 20px; margin-bottom: 24px;">
+        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Our Core Promises:</h4>
+        <ul style="list-style: disc; padding-left: 20px; font-size: 0.94rem; color: var(--text-charcoal); line-height: 1.7;">
+          <li>Daily inspection of fresh seafood and prime ingredients.</li>
+          <li>18-hour authentic simmering of natural pork & chicken tonkotsu stocks with no artificial additives.</li>
+          <li>Seasoned sushi rice prepared with traditional Japanese dashi vinegar.</li>
+        </ul>
+      </div>
+      <button class="btn btn-primary" onclick="closeStoryModal()">Explore Our Dishes</button>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       "HOW WE PREPARE" CULINARY SHOWCASE MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="prepare-modal" role="dialog" aria-modal="true">
+    <div class="modal-box" style="max-width: 680px; padding: 40px;">
+      <button class="modal-close-btn" onclick="closePrepareModal()" aria-label="Close preparation details">×</button>
+      <div class="section-eyebrow">職人の技術 • Master Craftsmanship</div>
+      <h2 style="font-size: 2.2rem; margin-bottom: 16px;">How We Prepare Your Dishes</h2>
+      <div style="position: relative; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 24px; aspect-ratio: 16 / 9; background: #000;">
+        <img src="assets/images/hero-sushi.jpg" alt="Sushi Preparation" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
+        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #FFF; background: rgba(0,0,0,0.35); padding: 20px; text-align: center;">
+          <span style="font-size: 2.5rem; margin-bottom: 10px;">🔪</span>
+          <h4 style="font-size: 1.3rem;">Every dish is freshly prepared to order</h4>
+          <p style="font-size: 0.9rem; opacity: 0.9;">Precision knife skills, temperature control, and aged tare sauces.</p>
+        </div>
+      </div>
+      <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 24px;">
+        From the precise body-temperature sushi rice to the intense binchotan charcoal sear on our teriyaki skewers, every dish is executed at the pinnacle of texture and umami.
+      </p>
+      <button class="btn btn-primary" onclick="closePrepareModal(); scrollToSection('menu');">Taste Our Menu</button>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       "GET DIRECTIONS" MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="directions-modal" role="dialog" aria-modal="true">
+    <div class="modal-box" style="max-width: 580px; padding: 36px;">
+      <button class="modal-close-btn" onclick="closeDirectionsModal()" aria-label="Close directions">×</button>
+      <div class="section-eyebrow">交通案内 • Transit Guide</div>
+      <h2 style="font-size: 2rem; margin-bottom: 12px;">Directions to AKARI</h2>
+      <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px;">
+        📍 <strong>Diamond Harbour Road, Near 3A Bus Stand, Thakurpukur, Kolkata, West Bengal 700063</strong>
+      </p>
+      <div style="background: var(--bg-cream); border-radius: var(--radius-sm); padding: 18px; margin-bottom: 24px; font-size: 0.92rem; line-height: 1.7;">
+        <p><strong>Transit & Landmark Guide:</strong><br>
+        1. <strong>By Bus / Auto:</strong> Get down at <strong>Thakurpukur 3A Bus Stand</strong> on Diamond Harbour Road.<br>
+        2. <strong>By Metro:</strong> Reach via <strong>Joka Metro Station</strong> (Purple Line), just 5 minutes away.<br>
+        3. <strong>Location:</strong> Located directly on Diamond Harbour Road with our signature vermilion Japanese noren curtain.<br>
+        4. <strong>Direct Line:</strong> Call or WhatsApp <strong>+91 84206 05823</strong> for reservations or pickup directions.
+        </p>
+      </div>
+      <div style="display: flex; gap: 12px;">
+        <a href="https://www.google.com/maps/search/?api=1&query=Diamond+Harbour+Road+Thakurpukur+Kolkata" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 1;">
+          Open in Google Maps
+        </a>
+        <button class="btn btn-outline" onclick="closeDirectionsModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       TOAST CONTAINER & BACK TO TOP BUTTON
+       ========================================================================= -->
+  <div id="toast-container" aria-live="polite"></div>
+
+  <!-- Floating WhatsApp Quick Button -->
+  <a href="https://wa.me/918420605823?text=Hello%20TABERU%20Kolkata!%20I%20would%20like%20to%20place%20an%20order%20or%20inquire%20about%20the%20menu." 
+     class="floating-whatsapp-btn" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Order or Chat on WhatsApp (+91 8420605823)" 
+     title="Order on WhatsApp (+91 84206 05823)">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="#FFFFFF">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"></path>
+    </svg>
+    <span class="floating-whatsapp-text">Order on WhatsApp</span>
+  </a>
+
+  <button class="back-to-top-btn" id="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Application Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
