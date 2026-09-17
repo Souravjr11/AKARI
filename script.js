@@ -1,12 +1,12 @@
 /**
- * TABERU (食べる) - Premium Japanese Restaurant
+ * AKARI (あかり) - Premium Japanese Restaurant
  * Vanilla ES6+ Application Script
  * Features:
  *  - 65 Authentic Japanese Menu Items across 13 Categories
  *  - Real-time Category Filtering & Instant Search
  *  - Interactive Food Detail Modal
  *  - Sliding Shopping Cart Drawer with LocalStorage Persistence
- *  - Promo Code Discount Engine (TABERU10, SAKURA20, SAKURA35)
+ *  - Promo Code Discount Engine (AKARI10, SAKURA20, SAKURA35)
  *  - Simulated Checkout & Order Tracking
  *  - Table Reservation & Contact Form Validation
  *  - Newsletter Subscription with instant voucher code
@@ -55,10 +55,10 @@ const MENU_DATA = [
     calories: '290 kcal',
     prepTime: '8 min'
   },
-  // 3. Sashimi Oishi Taberu (Sushi & Sashimi)
+  // 3. Sashimi Oishi AKARI (Sushi & Sashimi)
   {
     id: 'sushi-3',
-    name: 'Sashimi Oishi Taberu',
+    name: 'Sashimi Oishi AKARI',
     japaneseName: '特選刺身盛り合わせ',
     category: 'Sushi & Sashimi',
     categoryId: 'sushi-sashimi',
@@ -235,10 +235,10 @@ const MENU_DATA = [
     calories: '150 kcal',
     prepTime: '3 min'
   },
-  // 13. Taberu Grand Imperial Feast (Signature Combos)
+  // 13. AKARI Grand Imperial Feast (Signature Combos)
   {
     id: 'combo-1',
-    name: 'Taberu Grand Imperial Feast',
+    name: 'AKARI Grand Imperial Feast',
     japaneseName: '食べる特選和食御膳',
     category: 'Signature Combos',
     categoryId: 'combos',
@@ -269,7 +269,7 @@ const AppState = {
   freeDeliveryThreshold: 50.00,
   taxRate: 0.08,
   promos: {
-    'TABERU10': 0.10,
+    'AKARI10': 0.10,
     'SAKURA20': 0.20,
     'SAKURA35': 0.35
   }
@@ -280,7 +280,7 @@ const AppState = {
 // ==========================================
 function initStorage() {
   try {
-    const savedCart = localStorage.getItem('taberu_cart');
+    const savedCart = localStorage.getItem('akari_cart');
     if (savedCart) {
       AppState.cart = JSON.parse(savedCart);
     }
@@ -290,7 +290,7 @@ function initStorage() {
   }
 
   try {
-    const savedFavs = localStorage.getItem('taberu_favorites');
+    const savedFavs = localStorage.getItem('akari_favorites');
     if (savedFavs) {
       AppState.favorites = JSON.parse(savedFavs);
     }
@@ -302,7 +302,7 @@ function initStorage() {
 
 function saveCart() {
   try {
-    localStorage.setItem('taberu_cart', JSON.stringify(AppState.cart));
+    localStorage.setItem('akari_cart', JSON.stringify(AppState.cart));
   } catch (e) {
     console.error('Failed to save cart', e);
   }
@@ -310,7 +310,7 @@ function saveCart() {
 
 function saveFavorites() {
   try {
-    localStorage.setItem('taberu_favorites', JSON.stringify(AppState.favorites));
+    localStorage.setItem('akari_favorites', JSON.stringify(AppState.favorites));
   } catch (e) {
     console.error('Failed to save favorites', e);
   }
@@ -667,7 +667,7 @@ function applyPromoCode() {
     showToast(`Code ${code} applied! (${AppState.promos[code] * 100}% off)`, 'promo');
     input.value = '';
   } else {
-    showToast('Invalid promo code. Try TABERU10 or SAKURA20', 'error');
+    showToast('Invalid promo code. Try AKARI10 or SAKURA20', 'error');
   }
 }
 
@@ -980,7 +980,7 @@ function handleCheckoutSubmit(e) {
 
   // Construct structured WhatsApp message for 8420605823
   const wpPhone = '918420605823';
-  let wpMessage = `🍱 *TABERU (食べる) - NEW ORDER CONFIRMATION*\n`;
+  let wpMessage = `🍱 *AKARI (あかり) - NEW ORDER CONFIRMATION*\n`;
   wpMessage += `━━━━━━━━━━━━━━━━━━━━━\n`;
   wpMessage += `📋 *Order ID:* #${orderData.orderNum}\n`;
   wpMessage += `📅 *Date & Time:* ${orderData.timestamp}\n\n`;
@@ -1008,7 +1008,7 @@ function handleCheckoutSubmit(e) {
   wpMessage += `• Tax (8%): $${orderData.calc.tax.toFixed(2)}\n`;
   wpMessage += `⭐ *GRAND TOTAL: $${orderData.calc.total.toFixed(2)}*\n`;
   wpMessage += `━━━━━━━━━━━━━━━━━━━━━\n`;
-  wpMessage += `📍 *Restaurant:* TABERU, Diamond Harbour Road, Thakurpukur, Kolkata\n`;
+  wpMessage += `📍 *Restaurant:* AKARI, Diamond Harbour Road, Thakurpukur, Kolkata\n`;
   wpMessage += `💬 *Note:* Order placed online. Please confirm delivery arrival time.`;
 
   const whatsappUrl = `https://wa.me/${wpPhone}?text=${encodeURIComponent(wpMessage)}`;
@@ -1153,7 +1153,7 @@ function handleReservationSubmit(e) {
     detailsEl.innerHTML = `
       <div class="reservation-card">
         <div class="hanko-stamp">予約</div>
-        <h3>Table Reserved at TABERU Thakurpukur, Kolkata</h3>
+        <h3>Table Reserved at AKARI Thakurpukur, Kolkata</h3>
         <p>Dear <strong>${name}</strong>, your table for <strong>${guests} ${parseInt(guests) === 1 ? 'guest' : 'guests'}</strong> has been confirmed.</p>
         <div class="res-summary-box">
           <div>📅 Date: <strong>${date}</strong></div>
@@ -1197,14 +1197,14 @@ function handleNewsletterSubmit(e) {
     successEl.innerHTML = `
       <div class="newsletter-success-box">
         <span class="check-icon">✓</span>
-        <strong>Welcome to TABERU Family!</strong>
+        <strong>Welcome to AKARI Family!</strong>
         <p>Your 35% VIP Welcome voucher code is: <span class="voucher-code" onclick="copyVoucher('SAKURA35')">SAKURA35</span> (click to copy). Use it at checkout!</p>
       </div>
     `;
     successEl.style.display = 'block';
   }
 
-  showToast('Welcome to TABERU! Voucher code: SAKURA35 generated.', 'promo');
+  showToast('Welcome to AKARI! Voucher code: SAKURA35 generated.', 'promo');
   input.value = '';
 }
 
@@ -1503,7 +1503,7 @@ function initKeyboardShortcuts() {
 const SPECIAL_DISHES_DATA = [
   {
     id: 'sushi-3',
-    name: 'Sashimi Oishi Taberu',
+    name: 'Sashimi Oishi AKARI',
     japaneseName: '特選刺身盛り合わせ',
     category: 'Sushi & Sashimi',
     series: 'CHEF\'S MASTERPIECE',
@@ -2007,6 +2007,5 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contact-form');
   if (contactForm) contactForm.addEventListener('submit', handleContactSubmit);
 
-  console.log('🌸 TABERU (食べる) Premium Japanese Restaurant loaded successfully.');
+  console.log('🌸 AKARI (あかり) Premium Japanese Restaurant loaded successfully.');
 });
-

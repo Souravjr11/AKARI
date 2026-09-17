@@ -35,7 +35,7 @@
 
 ## ✨ Overview
 
-**AKARI (あかり)** — also featuring the **TABERU (食べる)** culinary line — is an authentic Japanese restaurant website designed to offer a tranquil, immersive, and high-conversion online dining journey. Built with performance and elegance in mind, it combines rich Japanese cultural aesthetics (wabi-sabi, dark urushi lacquer, vermilion accents, cherry blossom motley) with smooth modern web interactions.
+**AKARI (あかり)** is an authentic Japanese restaurant website designed to offer a tranquil, immersive, and high-conversion online dining journey. Built with performance and elegance in mind, it combines rich Japanese cultural aesthetics (wabi-sabi, dark urushi lacquer, vermilion accents, cherry blossom motley) with smooth modern web interactions.
 
 ---
 
@@ -70,7 +70,7 @@
 - Sliding glassmorphic cart drawer stored in browser `localStorage`.
 - Live quantity adjusters (`+` / `-`), individual item removal, and auto-clearing empty states.
 - **Coupon Discounts Engine**:
-  - `TABERU10` — Flat 10% discount on order total.
+  - `AKARI10` — Flat 10% discount on order total.
   - `SAKURA20` — 20% festive discount on orders above ₹800.
   - `SAKURA35` — 35% VIP discount on special chef orders.
 
@@ -204,7 +204,7 @@ Dishes are defined in `script.js` inside the `MENU_DATA` array:
 Dishes discount rules can be extended in `script.js` under the `applyCoupon()` handler:
 ```javascript
 const VALID_COUPONS = {
-  'TABERU10': { discount: 0.10, minOrder: 0 },
+  'AKARI10': { discount: 0.10, minOrder: 0 },
   'SAKURA20': { discount: 0.20, minOrder: 800 },
   'SAKURA35': { discount: 0.35, minOrder: 1500 }
 };
@@ -235,6 +235,6 @@ const VALID_COUPONS = {
 
 ## 📄 License & Credits
 
-- **Design & Code**: Developed for **AKARI (あかり) / TABERU (食べる)** Authentic Japanese Restaurant.
+- **Design & Code**: Developed for **AKARI (あかり)** Authentic Japanese Restaurant.
 - **Photography & Assets**: Curated authentic Japanese culinary illustrations and Unsplash photography.
 - **License**: MIT License. Free for commercial and personal restaurant applications.

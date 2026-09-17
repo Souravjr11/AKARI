@@ -1,5 +1,5 @@
 /* ==========================================================================
-   TABERU (食べる) - Premium Japanese Restaurant Stylesheet
+   AKARI (あかり) - Premium Japanese Restaurant Stylesheet
    Color Palette: Warm Japanese Cream / Deep Japanese Vermilion / Charcoal
    Typography: Editorial Serif Headings + Modern Clean Sans-Serif Body
    ========================================================================== */
@@ -3271,7 +3271,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --------------------------------------------------------------------------
-   16. LOCATION & HOURS SECTION ("Visit TABERU")
+   16. LOCATION & HOURS SECTION ("Visit AKARI")
    -------------------------------------------------------------------------- */
 .location-section {
   background-color: var(--bg-cream);
